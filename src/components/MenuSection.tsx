@@ -75,7 +75,7 @@ export function MenuSection({ items, onAddToCart }: MenuSectionProps) {
                 type="button"
                 onClick={() => setInspectItem(item)}
                 className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100 text-left cursor-pointer"
-                aria-label={`View details and JSON fields for ${item.name}`}
+                aria-label={`View tasting and brew details for ${item.name}`}
               >
                 <ResilientImage
                   src={item.image}
@@ -120,9 +120,9 @@ export function MenuSection({ items, onAddToCart }: MenuSectionProps) {
                   <button
                     type="button"
                     onClick={() => setInspectItem(item)}
-                    className="text-xs font-mono text-zinc-500 hover:text-zinc-900 underline underline-offset-4 whitespace-nowrap shrink-0 cursor-pointer"
+                    className="text-xs text-zinc-500 hover:text-zinc-900 underline underline-offset-4 whitespace-nowrap shrink-0 cursor-pointer"
                   >
-                    View JSON
+                    Tasting &amp; Brew
                   </button>
                   <button
                     type="button"
@@ -181,24 +181,19 @@ export function MenuSection({ items, onAddToCart }: MenuSectionProps) {
                     {inspectItem.description}
                   </p>
 
-                  <div className="text-xs text-zinc-600 space-y-1">
+                  <div className="text-xs text-zinc-600 space-y-2 pt-2 border-t border-zinc-100">
                     <div>
-                      <span className="text-zinc-400">Notes: </span>
+                      <span className="text-zinc-400">Tasting Notes: </span>
                       {inspectItem.tastingNotes.join(' · ')}
+                    </div>
+                    <div>
+                      <span className="text-zinc-400">Roast Profile: </span>
+                      {inspectItem.roastLevel}
                     </div>
                     <div className="font-mono tabular-nums">
                       <span className="text-zinc-400 font-sans">Brew Spec: </span>
                       {inspectItem.brewParams.doseGrams}g · {inspectItem.brewParams.waterTempC}°C · {inspectItem.brewParams.extractionSec}s
                     </div>
-                  </div>
-
-                  <div>
-                    <p className="text-[11px] font-mono uppercase tracking-wide text-zinc-500 mb-1.5">
-                      Item JSON Field Record
-                    </p>
-                    <pre className="bg-zinc-950 text-zinc-100 p-3 rounded-md text-[11px] font-mono overflow-x-auto max-h-40 leading-relaxed">
-                      {JSON.stringify(inspectItem, null, 2)}
-                    </pre>
                   </div>
                 </div>
 

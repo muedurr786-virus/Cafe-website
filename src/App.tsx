@@ -11,8 +11,7 @@ import { CartDrawer } from './components/CartDrawer';
 const INITIAL_SHOP_DATA = rawShopData as CoffeeShopPayload;
 
 export default function App() {
-  const [shopData, setShopData] = useState<CoffeeShopPayload>(INITIAL_SHOP_DATA);
-  const [aiViewMode, setAiViewMode] = useState<'spatial' | 'json'>('spatial');
+  const [shopData] = useState<CoffeeShopPayload>(INITIAL_SHOP_DATA);
   const [cart, setCart] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [quotaExceeded, setQuotaExceeded] = useState(false);
@@ -71,8 +70,7 @@ export default function App() {
 
   const totalBagCount = cart.reduce((sum, entry) => sum + entry.quantity, 0);
 
-  const navigateToAiSection = (mode: 'spatial' | 'json') => {
-    setAiViewMode(mode);
+  const scrollToAiSection = () => {
     const el = document.getElementById('ai-shop-view');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -118,26 +116,18 @@ export default function App() {
             >
               Menu
             </a>
-            <button
-              type="button"
-              onClick={() => navigateToAiSection('spatial')}
-              className="hover:text-zinc-900 hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            <a
+              href="#ai-shop-view"
+              className="hover:text-zinc-900 hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0"
             >
               AI Space View
-            </button>
+            </a>
             <a
               href="#location"
               className="hover:text-zinc-900 hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0"
             >
               Location
             </a>
-            <button
-              type="button"
-              onClick={() => navigateToAiSection('json')}
-              className="hover:text-zinc-900 hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-            >
-              JSON Fields
-            </button>
           </nav>
 
           <div className="flex items-center shrink-0">
@@ -182,7 +172,7 @@ export default function App() {
                   </a>
                   <button
                     type="button"
-                    onClick={() => navigateToAiSection('spatial')}
+                    onClick={scrollToAiSection}
                     className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium text-zinc-900 bg-white border border-zinc-300 hover:bg-zinc-100 rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                   >
                     AI Full Shop View
@@ -219,10 +209,6 @@ export default function App() {
 
         <AiFullShopView
           shopData={shopData}
-          viewMode={aiViewMode}
-          onViewModeChange={setAiViewMode}
-          onApplyShopJson={(nextData) => setShopData(nextData)}
-          onResetShopJson={() => setShopData(INITIAL_SHOP_DATA)}
           onAddToCart={handleAddToCart}
         />
 
