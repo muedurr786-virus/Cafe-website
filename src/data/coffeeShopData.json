@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "2026.1",
+  "shop": {
+    "name": "Kestrel Roastery",
+    "headline": "Small-batch roasting, sunlit space, and precision extraction.",
+    "tagline": "Every cup, architectural zone, and origin lot at Kestrel is structured for clarity—whether you are dropping in for a cortado, exploring the full space with our AI guide, or navigating directly to our Pearl District roastery.",
+    "founded": 2021,
+    "roasterSpec": "Loring S15 Falcon · Clean-Air Convection",
+    "heroImage": "/src/assets/images/hero_coffee_interior_1795606804361.jpg",
+    "panoramaImage": "/src/assets/images/shop_courtyard_panoramic_1795606808557.jpg",
+    "hours": {
+      "weekdays": "07:00 – 18:00",
+      "weekends": "08:00 – 19:00"
+    },
+    "contact": {
+      "email": "hello@kestrelroastery.example",
+      "phone": "+1 (503) 555-0194"
+    },
+    "heroMetrics": [
+      { "label": "Single-Origin Lots", "value": "8 Active" },
+      { "label": "Roast Schedule", "value": "Tue · Fri" },
+      { "label": "Seating Capacity", "value": "54 Seats" },
+      { "label": "Neighborhood", "value": "Pearl District" }
+    ]
+  },
+  "location": {
+    "address": "418 NW 11th Ave, Portland, OR 97209",
+    "neighborhood": "Pearl District",
+    "city": "Portland, Oregon",
+    "coordinates": {
+      "lat": 45.5262,
+      "lng": -122.6821
+    },
+    "transitNotes": [
+      "Portland Streetcar NS Line — NW 11th & Couch (2 min walk)",
+      "Protected bike racks inside the courtyard gate",
+      "Step-free oak threshold and wide aisle clearance"
+    ]
+  },
+  "spatialZones": [
+    {
+      "id": "zone-espresso-bar",
+      "name": "01. Espresso & Brew Bar",
+      "seating": "8 Bar Counter Seats",
+      "acoustics": "Lively · Grinder & Steam",
+      "lighting": "Skylight + Warm Pendant",
+      "signatureEquipment": "3-Group Brass-Accented Espresso Machine & EK43S",
+      "hotspot": { "x": 18, "y": 54 },
+      "image": "/src/assets/images/espresso_latte_craft_1795606805438.jpg",
+      "description": "Anchored by a honed black slate counter and white oak millwork, the front bar pairs side-by-side espresso extraction with hand-poured single-origin filters."
+    },
+    {
+      "id": "zone-communal-table",
+      "name": "02. Solid Oak Tasting Table",
+      "seating": "16 Communal Seats",
+      "acoustics": "Focused · Low Conversation",
+      "lighting": "Natural Clerestory Daylight",
+      "signatureEquipment": "14ft Oregon White Oak Slab with Recessed Power",
+      "hotspot": { "x": 54, "y": 68 },
+      "image": "/src/assets/images/hero_coffee_interior_1795606804361.jpg",
+      "description": "Centered beneath timber rafters and skylights, our communal table offers warm daylight, botanical greenery, and ergonomic seating for morning reading or remote sessions."
+    },
+    {
+      "id": "zone-roastery-glass",
+      "name": "03. Glass-Walled Roastery",
+      "seating": "6 Cupping Table Seats",
+      "acoustics": "Quietly Mechanical · Acoustic Glass",
+      "lighting": "Overhead Industrial Track",
+      "signatureEquipment": "Convection Drum Roaster & Sample Cupping Lab",
+      "hotspot": { "x": 56, "y": 42 },
+      "image": "/src/assets/images/pourover_brewing_1795606806789.jpg",
+      "description": "Behind steel-framed acoustic glass, green coffee burlap sacks from Ethiopia, Colombia, and Kenya are roasted twice weekly with live thermal profiling."
+    },
+    {
+      "id": "zone-garden-courtyard",
+      "name": "04. Sunlit Garden Courtyard",
+      "seating": "24 Indoor-Outdoor Seats",
+      "acoustics": "Breezy · Open-Air Ferns",
+      "lighting": "Filtered Natural Sunlight",
+      "signatureEquipment": "Heated Cedar Pergola & Steel Bi-Fold Doors",
+      "hotspot": { "x": 85, "y": 56 },
+      "image": "/src/assets/images/shop_courtyard_panoramic_1795606808557.jpg",
+      "description": "Steel bi-fold doors open onto a sheltered courtyard lined with Pacific Northwest ferns, Japanese maples, and bistro seating for unhurried afternoons."
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "item-stoneware-cortado",
+      "name": "Stoneware Cortado",
+      "category": "Espresso",
+      "priceUsd": 5.25,
+      "origin": "Huila, Colombia · Washed",
+      "roastLevel": "Medium-Light",
+      "tastingNotes": ["Dark Caramel", "Toasted Almond", "Blood Orange"],
+      "brewParams": {
+        "doseGrams": 19,
+        "waterTempC": 93,
+        "extractionSec": 29
+      },
+      "available": true,
+      "image": "/src/assets/images/espresso_latte_craft_1795606805438.jpg",
+      "description": "Double ristretto pulled at 9 bars and balanced with equal parts textured whole or oat milk in a hand-thrown stoneware cup."
+    },
+    {
+      "id": "item-guji-v60",
+      "name": "Ethiopia Guji V60",
+      "category": "Pour Over",
+      "priceUsd": 6.75,
+      "origin": "Hambela, Ethiopia · Natural",
+      "roastLevel": "Light",
+      "tastingNotes": ["Jasmine Blossom", "Bergamot", "White Peach"],
+      "brewParams": {
+        "doseGrams": 16,
+        "waterTempC": 94,
+        "extractionSec": 165
+      },
+      "available": true,
+      "image": "/src/assets/images/pourover_brewing_1795606806789.jpg",
+      "description": "Hand-poured to order through a ribbed ceramic cone using remineralized water for floral clarity and tea-like sweetness."
+    },
+    {
+      "id": "item-single-origin-flight",
+      "name": "Espresso & Filter Flight",
+      "category": "Espresso",
+      "priceUsd": 9.5,
+      "origin": "Kenya Nyeri · Dual Preparation",
+      "roastLevel": "Light-Medium",
+      "tastingNotes": ["Blackcurrant", "Cacao Nib", "Meyer Lemon"],
+      "brewParams": {
+        "doseGrams": 18,
+        "waterTempC": 93,
+        "extractionSec": 28
+      },
+      "available": true,
+      "image": "/src/assets/images/espresso_latte_craft_1795606805438.jpg",
+      "description": "One lot prepared two ways—a bright straight espresso paired with a chilled sparkling water palate cleanser and 4oz filter pour."
+    },
+    {
+      "id": "item-kyoto-slow-drip",
+      "name": "Huila Reserve Kalita",
+      "category": "Pour Over",
+      "priceUsd": 6.5,
+      "origin": "San Agustín, Colombia · Honey",
+      "roastLevel": "Light-Medium",
+      "tastingNotes": ["Panela Sugar", "Red Cherry", "Cocoa"],
+      "brewParams": {
+        "doseGrams": 18,
+        "waterTempC": 92,
+        "extractionSec": 180
+      },
+      "available": true,
+      "image": "/src/assets/images/pourover_brewing_1795606806789.jpg",
+      "description": "Flat-bottom ceramic extraction emphasizing syrupy mouthfeel, stone fruit sweetness, and a lingering chocolate finish."
+    },
+    {
+      "id": "item-guji-whole-bean",
+      "name": "Ethiopia Guji · 250g Bag",
+      "category": "Whole Bean",
+      "priceUsd": 21.0,
+      "origin": "Hambela, Ethiopia · 2,150 MASL",
+      "roastLevel": "Light",
+      "tastingNotes": ["Bergamot", "Apricot", "Honeycomb"],
+      "brewParams": {
+        "doseGrams": 16,
+        "waterTempC": 94,
+        "extractionSec": 165
+      },
+      "available": true,
+      "image": "/src/assets/images/roastery_beans_pastry_1795606807324.jpg",
+      "description": "Small-batch whole bean coffee roasted in our Pearl District glass roastery; valve-sealed within two hours of cooling."
+    },
+    {
+      "id": "item-cardamom-knot",
+      "name": "Laminated Cardamom Knot",
+      "category": "Pastries",
+      "priceUsd": 5.5,
+      "origin": "In-House Morning Bake · 06:30",
+      "roastLevel": "Cultured Butter",
+      "tastingNotes": ["Freshly Ground Cardamom", "Orange Zest", "Pearl Sugar"],
+      "brewParams": {
+        "doseGrams": 115,
+        "waterTempC": 205,
+        "extractionSec": 1080
+      },
+      "available": true,
+      "image": "/src/assets/images/roastery_beans_pastry_1795606807324.jpg",
+      "description": "Twenty-seven-layer sourdough brioche folded with cultured Normandy butter and freshly mortar-crushed green cardamom pods."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Kestrel Roastery",
+  "description": "Specialty coffee house with interactive Google Maps location, AI-guided full-shop spatial walkthrough, and live JSON schema explorer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
